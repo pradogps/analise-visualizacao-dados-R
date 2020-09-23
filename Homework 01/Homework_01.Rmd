@@ -9,22 +9,98 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+### **Exercício 1** 
+```{r}
+(1 + (1 / 10^6)) ^ (10^6)
+```
+```{r}
+log(exp(1)) * exp(0)
+```
+```{r}
+(sin(1)^2) + (cos(1)^2)
+```
+```{r}
+2.99999 < 3
+3 == 3.00000001
+```
+```{r}
+(1 + (1 / 10^10)) ^ (10^10) == exp(1)
+exp(1)
+(1 + (1 / 10^10)) ^ (10^10)
+```
+```{r}
+sin(0.0001)/0.0001
+sin(0.0001)/0.0001 - 1
+sin(0.0001)/0.0001 - 1 == 0
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+### **Exercício 2** 
+```{r}
+#install.packages("Brasil")
+#library(Brasil)
+#?SP() ou help("SP")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Fora do R, uma boa alternativa é procurar no google, tirar dúvidas no stack overflow, olhar repositórios no github, documentação dos pacotes no site.
+
+```{r}
+?summary()
+```
+
+### **Exercício 3** 
+
+
+
+### **Exercício 4** 
+```{r}
+
+```
+
+### **Exercício 5** 
+```{r}
+
+```
+
+### **Exercício 6** 
+```{r}
+((1 + sqrt(5)) / 2)
+```
+
+### **Exercício 7** 
+```{r}
+1 / 0
+-1 / 0
+```
+
+### **Exercício 8** 
+```{r}
+0/0
+
+```
+
+### **Exercício 9** 
+```{r}
+5 + 3 * 10 %/% 3 == 15
+```
+```{r}
+5 + 3 * 10 %/% 3
+10 %/% 3
+5 + 3 * 3 #realiza primeiro a operação de multiplicação
+5 + ((3 * 10) %/% 3) == 15
+```
+
+### **Exercício 10** 
+```{r}
+for(i in 1:7){
+    print(i**3)
+}
+```
+
+### **Exercício 11** 
+```{r}
+getwd()
+```
+
+
+*<u>Material usado para o curso: Análise e visualização de dados usando o R.</u>*
+
