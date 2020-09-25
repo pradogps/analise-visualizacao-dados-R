@@ -1,106 +1,193 @@
 ---
-title: "Homework_01"
-author: "Gustavo Prado"
-date: "22 de setembro de 2020"
-output: html_document
+title: "**Homework 1**"
+author: "_Gustavo Prado_"
+date: "_22 de setembro de 2020_"
+output: 
+    html_document:
+        highlight: tango
+        theme: cosmo
+        number_sections: no
+        toc: yes
+        toc_float:
+            collapsed: yes
+            smooth_scrool: yes
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, collapse = TRUE)
 ```
 
-### **Exercício 1** 
-```{r}
+---
+
+$$ \cdot $$ 
+
+## *Exercício 1*
+Aproximação para o número de euler, sendo o número $10^6$ uma escolha arbitrária, podendo ser substituído por outro número que tende ao infinito.
+$$ \left (1 + \frac{1}{10^6} \right)^{10^6} \approx\ e $$
+
+```{r Exercício 1.1}
 (1 + (1 / 10^6)) ^ (10^6)
 ```
-```{r}
+  
+Operação simples com propriedades do logaritmo neperiano.
+$$ ln(e) \cdot e^0 = 1$$
+```{r Exercício 1.2}
 log(exp(1)) * exp(0)
 ```
-```{r}
-(sin(1)^2) + (cos(1)^2)
+  
+Operação para verificar a identidade trigonométrica fundamental.
+$$ sin^2x + cos^2x = 1$$
+```{r Exercício 1.3}
+a <- 1
+(sin(a)^2) + (cos(a)^2)
 ```
-```{r}
-2.99999 < 3
-3 == 3.00000001
+  
+Usando operadores lógicos e de comparação.
+```{r Exercício 1.4}
+x <- (2.99999 < 3)
+y <- (3 == 3.000001)
+x
+y
 ```
-```{r}
-(1 + (1 / 10^10)) ^ (10^10) == exp(1)
+  
+Neste próximo exemplo podemos observar melhor que pela diferença nas casas decimais, números praticamente idênticos, se comparados, retornam `FALSE`. 
+```{r Exercício 1.5}
+(1 + (1 / 10^6)) ^ (10^6) == exp(1)
 exp(1)
-(1 + (1 / 10^10)) ^ (10^10)
+(1 + (1 / 10^6)) ^ (10^6)
 ```
-```{r}
-sin(0.0001)/0.0001
-sin(0.0001)/0.0001 - 1
-sin(0.0001)/0.0001 - 1 == 0
+  
+Testando combinações lógicas com OU`|`, E`&` e negação`!`.
+```{r Exercício 1.6}
+!TRUE
+TRUE & FALSE
+TRUE | FALSE
+FALSE | FALSE
+FALSE & FALSE
 ```
 
-### **Exercício 2** 
-```{r}
+$$ \cdot\cdot\cdot $$ 
+  
+## *Exercício 2*
+Fixando o conceito de instalar pacotes e carregá-los no `R` usando <span style="color:red">`install.packges(`</span>`"PACOTE"`<span style="color:red">`)`</span> e para usar no próprio código, após instalado, a <span style="color:red">`função library(`</span>`PACOTE`<span style="color:red">`)`</span>, sem as aspas. Uma maneira útil de aprender sobre as novas funções é usar a função <span style="color:red">`help()`</span> no `R` ou usando `?` antes da função.
+No `chunk` abaixo foi usado o comentário `#` para que o código não seja lido.
+```{r Exercício 2.1}
 #install.packages("Brasil")
 #library(Brasil)
 #?SP() ou help("SP")
 ```
 
-Fora do R, uma boa alternativa é procurar no google, tirar dúvidas no stack overflow, olhar repositórios no github, documentação dos pacotes no site.
+Fora do `R`, uma boa alternativa é procurar no google, tirar dúvidas no stack overflow, olhar repositórios e issues no github, documentação dos pacotes em sites, e vídeos no youtube.
 
-```{r}
-?summary()
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 3* 
+Uma maneira simples de criar um `chunk` no `R markdown` é usar um atalho <span style="color:red">`CTRL+ALT+I`</span>. Já através de cliques no RStudio, pelo botão `Insert` e depois clicar em `R`. O botão `Knit` permite transformar os arquivos `.Rmd` para visualização em `HTML` ou até mesmo para `.PDF`, gerando relatórios mais apresentáveis e elegantes.
+
+$$ \cdot\cdot\cdot $$  
+  
+## *Exercício 4*
+Nesse exercício vemos a diferença de atribuição para variável *vet_1*, que retorna `NULL`, ou seja, nulo, enquanto a segunda variável *vet_2*, retorna um vetor de tamanho 1, como atributo uma string.
+```{r Exercício 4.1}
+vet_1 <- c()
+vet_2 <- c("")
+print(vet_1)
+print(vet_2)
 ```
 
-### **Exercício 3** 
-
-
-
-### **Exercício 4** 
-```{r}
-
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 5*
+Complementar essa resposta.
+```{r Exercício 5.1}
+seq_1 <- seq(from=1,to=99,by=1)
+seq_2 <- seq(from=2,to=99,by=2)
+print(seq_1)
+print(seq_2)
 ```
 
-### **Exercício 5** 
-```{r}
-
-```
-
-### **Exercício 6** 
-```{r}
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 6*
+A proporção áurea, ou número de ouro, é um número irracional que pode ser obtido pela fórmula:
+$$ \phi = \frac{1+ \sqrt 5}{2} \approx\ 1,618 $$
+Verificando pelo código no `R`.
+```{r Exercício 6.1}
 ((1 + sqrt(5)) / 2)
 ```
 
-### **Exercício 7** 
-```{r}
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 7* 
+Verificando o que se pede no exercício.
+```{r Exercício 7.1}
 1 / 0
 -1 / 0
 ```
+Obtemos como resultado `infinito` e `-infinito`.
 
-### **Exercício 8** 
-```{r}
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 8* 
+`NaN`: Not a Number.  
+`NULL`: Nulo/vazio.  
+`NA`: Not Available.  
+`Inf`: Infinite.
+```{r Exercício 8.1}
 0/0
+print(vet_1) #vetor usado no exercício 4
+mean("z")
+10^100000
 
 ```
 
-### **Exercício 9** 
-```{r}
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 9* 
+Verificando o que retorna a expressão:
+```{r Exercício 9.1}
 5 + 3 * 10 %/% 3 == 15
 ```
-```{r}
+Vemos que retorna `FALSE`. Abaixo usando parênteses vamos fazer com que retorne `TRUE`.
+```{r Exercício 9.2}
 5 + 3 * 10 %/% 3
 10 %/% 3
 5 + 3 * 3 #realiza primeiro a operação de multiplicação
 5 + ((3 * 10) %/% 3) == 15
 ```
+Na primeira linha vemos que o código original, na parte esquerda, retorna o valor 14, que é diferente do valor 15, portanto no primeiro `chunk`, onde retorna `FALSE`, o programa verifica que são valores distintos. Na expressão original o programa da prioridade na execução do operador `%/%` que retorna a parte inteira da divisão do valor 10 por 3, resultando em 3, depois fazendo a multiplicação pelo valor 3 novamente, e por último somando 5, resultando em 14. Usando o parênteses damos prioridade para essa execução no programa, portanto primeiro é feita a multiplicação, somente depois a parte inteira da divisão, e por último a soma, resultando em `TRUE`, verificando a igualdade.
 
-### **Exercício 10** 
-```{r}
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 10*
+Estrutura de repetição, Iterando no `R`.
+```{r Exercício 10.1}
 for(i in 1:7){
     print(i**3)
 }
 ```
 
-### **Exercício 11** 
-```{r}
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 11* 
+Usando a função `getwd()`.
+```{r Exercício 11.1}
 getwd()
 ```
 
+$$ \cdot $$ 
 
+```{python}
+import matplotlib.pyplot as plt
+plt.plot( [10,5,3,4,6,8] )
+plt.title("Muito Fácil")
+plt.show()
+```
+
+
+---
+  
+  
 *<u>Material usado para o curso: Análise e visualização de dados usando o R.</u>*
-
+<br>
+<br>
