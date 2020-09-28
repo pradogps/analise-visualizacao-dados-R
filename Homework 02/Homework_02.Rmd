@@ -1,0 +1,82 @@
+---
+title: "**Homework 2 - ggplot2** <img src=\"Capturar.png\" style=\"float: right;\"/> "
+author: "_Gustavo Prado_"
+date: "_15 de Outubro de 2020_"
+output: 
+    html_document:
+        highlight: tango
+        theme: cosmo
+        number_sections: no
+        toc: yes
+        toc_float:
+            collapsed: yes
+            smooth_scrool: yes
+---
+
+```{css, echo=FALSE}
+pre {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 300px;
+}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, collapse = TRUE)
+```
+
+---
+
+$$ \cdot $$ 
+
+## *Exercício 1*
+
+$$ \cdot\cdot\cdot $$ 
+  
+## *Exercício 2*
+
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 3* 
+
+$$ \cdot\cdot\cdot $$  
+  
+## *Exercício 4*
+
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 5*
+
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 6*
+
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 7* 
+
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 8* 
+
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 9* 
+
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 10*
+
+$$ \cdot\cdot\cdot $$   
+  
+## *Exercício 11* 
+
+$$ \cdot $$ 
+
+---
+  
+*<u>Material usado para o curso: Análise e visualização de dados usando o R.</u>*
+<br>

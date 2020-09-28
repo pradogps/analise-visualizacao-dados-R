@@ -1,7 +1,7 @@
 ---
-title: "**Homework 1**"
+title: "**Homework 1 - Introdução** <img src=\"Capturar.png\" style=\"float: right;\"/> "
 author: "_Gustavo Prado_"
-date: "_22 de setembro de 2020_"
+date: "_05 de Outubro de 2020_"
 output: 
     html_document:
         highlight: tango
@@ -12,6 +12,17 @@ output:
             collapsed: yes
             smooth_scrool: yes
 ---
+
+```{css, echo=FALSE}
+pre {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 300px;
+}
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, collapse = TRUE)
@@ -26,7 +37,7 @@ Aproximação para o número de euler, sendo o número $10^6$ uma escolha arbitr
 $$ \left (1 + \frac{1}{10^6} \right)^{10^6} \approx\ e $$
 
 ```{r Exercício 1.1}
-(1 + (1 / 10^6)) ^ (10^6)
+(1 + (1 / (10^6))) ^ ((10^6))
 ```
   
 Operação simples com propriedades do logaritmo neperiano.
@@ -58,7 +69,7 @@ exp(1)
 ```
   
 Testando combinações lógicas com OU`|`, E`&` e negação`!`.
-```{r Exercício 1.6}
+```{r Exercício 1.6, collapse=FALSE}
 !TRUE
 TRUE & FALSE
 TRUE | FALSE
@@ -93,6 +104,8 @@ vet_1 <- c()
 vet_2 <- c("")
 print(vet_1)
 print(vet_2)
+length(vet_1)
+length(vet_2)
 ```
 
 $$ \cdot\cdot\cdot $$   
@@ -100,11 +113,15 @@ $$ \cdot\cdot\cdot $$
 ## *Exercício 5*
 Complementar essa resposta.
 ```{r Exercício 5.1}
-seq_1 <- seq(from=1,to=99,by=1)
-seq_2 <- seq(from=2,to=99,by=2)
+seq_1 <- seq(from=1,to=999,by=1)
+seq_2 <- seq(from=2,to=999,by=2)
 print(seq_1)
+```
+
+```{r}
 print(seq_2)
 ```
+
 
 $$ \cdot\cdot\cdot $$   
   
@@ -177,17 +194,7 @@ getwd()
 
 $$ \cdot $$ 
 
-```{python}
-import matplotlib.pyplot as plt
-plt.plot( [10,5,3,4,6,8] )
-plt.title("Muito Fácil")
-plt.show()
-```
-
-
 ---
   
-  
 *<u>Material usado para o curso: Análise e visualização de dados usando o R.</u>*
-<br>
 <br>
